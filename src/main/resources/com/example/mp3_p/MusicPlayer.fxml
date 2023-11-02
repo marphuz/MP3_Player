@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="600.0" style="-fx-background-color: #FFC72C;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mp3_p.MusicPlayerController">
+    <children>
+        <Label fx:id="MP3PLAYER" accessibleRole="BUTTON" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #00563B; -fx-border-color: black;" text="MP3" textOverrun="CLIP">
+            <font>
+                <Font name="Arial Bold" size="40.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="CROSSHAIR" />
+            </cursor>
+            <effect>
+                <Glow />
+            </effect>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.5473684072494507" green="0.5088499188423157" blue="0.5088499188423157" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9052631855010986" green="0.8140662908554077" blue="0.22128655016422272" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Button fx:id="Pause" alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="154.0" mnemonicParsing="false" onAction="#Pause" style="-fx-label-padding: 1;" text="PAUSE" textFill="#00563b">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <Reflection bottomOpacity="0.05" fraction="1.0" topOpacity="0.58" />
+            </effect>
+        </Button>
+        <Button fx:id="Play" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="154.0" mnemonicParsing="false" onAction="#Play" style="-fx-label-padding: 1;" text="PLAY" textFill="#00563b">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <Reflection bottomOpacity="0.05" fraction="1.0" topOpacity="0.58" />
+            </effect>
+        </Button>
+        <Button fx:id="Reset" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="154.0" mnemonicParsing="false" onAction="#Reset" style="-fx-label-padding: 1;" text="RESET" textFill="#00563b">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <Reflection bottomOpacity="0.05" fraction="1.0" topOpacity="0.58" />
+            </effect>
+        </Button>
+        <Button fx:id="Previous" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="154.0" mnemonicParsing="false" onAction="#Previous" style="-fx-label-padding: 1;" text="PREVIOUS" textFill="#00563b">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <Reflection bottomOpacity="0.05" fraction="1.0" topOpacity="0.58" />
+            </effect>
+        </Button>
+        <Button fx:id="Next" alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="154.0" mnemonicParsing="false" onAction="#Next" style="-fx-label-padding: 1;" text="NEXT" textFill="#00563b">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <Reflection bottomOpacity="0.05" fraction="1.0" topOpacity="0.58" />
+            </effect>
+        </Button>
+        <Slider fx:id="VolumeSlider" layoutX="452.0" layoutY="154.0" minorTickCount="2" showTickLabels="true" showTickMarks="true" value="100" />
+        <ComboBox fx:id="Speed" editable="true" layoutX="370.0" layoutY="153.0" onAction="#Speed" prefHeight="33.0" prefWidth="76.0" promptText="Speed" style="-fx-background-color: #00563B;">
+            <cursor>
+                <Cursor fx:constant="MOVE" />
+            </cursor>
+        </ComboBox>
+        <ProgressBar fx:id="MusicBar" layoutY="96.0" mouseTransparent="true" prefHeight="7.0" prefWidth="600.0" progress="0.0" style="-fx-background-color: green;" />
+        <CheckBox fx:id="AutoPlay" layoutX="389.0" layoutY="202.0" mnemonicParsing="false" onAction="#AutoPlay" text="AutoPlay" underline="true">
+            <font>
+                <Font name="Leelawadee UI Semilight" size="14.0" />
+            </font>
+            <effect>
+                <Reflection />
+            </effect>
+        </CheckBox>
+        <CheckBox fx:id="Shuffle" layoutX="490.0" layoutY="203.0" lineSpacing="3.0" mnemonicParsing="false" onAction="#Shuffle" text="Shuffle" underline="true">
+            <font>
+                <Font name="Leelawadee" size="14.0" />
+            </font>
+            <effect>
+                <Reflection />
+            </effect>
+        </CheckBox>
+    </children>
+    <effect>
+        <DropShadow height="255.0" radius="127.0" width="255.0" />
+    </effect>
+</AnchorPane>
