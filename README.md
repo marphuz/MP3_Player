@@ -26,3 +26,7 @@ A simple music player (.mp3 and .wav files).
 The proper JDK or JRE should be installed in your system to run this application (JavaFX version 17).
 
 ---
+
+## License
+This software is licensed under MIT License.
+
