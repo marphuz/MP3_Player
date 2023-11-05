@@ -1,4 +1,4 @@
-# MP3_Player
+# MP3 Player
 A simple music player (.mp3 and .wav files).
 
 ---
